@@ -1,3 +1,3 @@
-import { router } from "../app/router/router";
+import { router } from "src/app/router/router";
 
 export { router };
