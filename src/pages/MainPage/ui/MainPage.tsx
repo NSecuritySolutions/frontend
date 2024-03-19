@@ -1,5 +1,12 @@
+import { Title } from './styled';
+
 const MainPage = () => {
-  return <div>MainPage hello</div>;
+  return (
+    <Title>
+      Установка систем безопасности в Новосибирске и Новосибирской области для
+      дома и Вашего бизнеса
+    </Title>
+  );
 };
 
 export default MainPage;

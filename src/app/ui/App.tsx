@@ -1,12 +1,14 @@
 import { Outlet } from 'react-router-dom';
+import AppStyles from './styled';
 
 const App = () => {
   return (
-    <div>
+    <>
+      <AppStyles />
       <main>
         <Outlet />
       </main>
-    </div>
+    </>
   );
 };
 
