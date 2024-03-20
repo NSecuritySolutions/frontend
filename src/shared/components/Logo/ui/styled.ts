@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom';
 //TODO сделать когда будет лого готов у дизайнеров
 const LogoContainer = styled.div`
   display: flex;
-  width: 150px;
-  height: 50px;
+  width: 136px;
+  height: 40px;
 `;
 
 //TODO сделать когда будет лого готов у дизайнеров: добавить стили если лого будет с текстом
