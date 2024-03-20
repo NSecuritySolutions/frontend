@@ -17,7 +17,9 @@ const ProjectStage = () => {
   return (
     <Section>
       <SectionWrapper>
-        <SectionTitle>Этапы работ</SectionTitle>
+        <SectionTitle>
+          Этапы работ fhdoifh;vdoifhv;dfihbv;dlfivdl;ijv'd ;goiuf;ogibhfi
+        </SectionTitle>
         <ColumnWrapper>
           {projectMilestones.map((item, i) => (
             <Column key={i}>

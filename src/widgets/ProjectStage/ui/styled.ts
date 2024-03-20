@@ -40,7 +40,10 @@ const SectionWrapper = styled.div`
 const SectionTitle = styled.h2`
   color: ${colors.darkPrimary};
   display: flex;
-  flex-direction: row;
+  overflow: hidden;
+  // white-space: nowrap;
+  // text-overflow: ellipsis;
+
   font:
     700 24px Manrope,
     sans-serif;
