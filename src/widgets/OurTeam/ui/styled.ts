@@ -87,59 +87,6 @@ const Column = styled.div`
   }
 `;
 
-const StageWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  white-space: nowrap;
-  text-align: center;
-
-  @media (max-width: 940px) {
-    white-space: initial;
-  }
-
-  @media (max-width: 619px) {
-    flex-direction: column;
-  }
-`;
-const StageNumber = styled.div`
-  font-family: Manrope, sans-serif;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 2px 2px 25px 0px rgba(16, 16, 16, 0.05);
-  background-color: ${colors.backgroundPrimary};
-  padding: 10px;
-  border-radius: 500px;
-  width: 45px;
-  height: 45px;
-  padding: 10px;
-  font-size: 18px;
-  font-weight: 800;
-
-  @media (max-width: 940px) {
-    white-space: initial;
-  }
-`;
-
-const StageLine = styled.div`
-  border-color: rgba(16, 16, 16, 1);
-  border-style: solid;
-  border-width: 1px;
-  background-color: ${colors.darkPrimary};
-  width: 175px;
-  height: 1px;
-  margin: auto 0;
-
-  @media (max-width: 619px) {
-    border-style: solid;
-    border-width: 1px;
-    align-self: center;
-    margin-top: 22.5px;
-    width: 1px;
-    height: 50px;
-    margin: 0;
-  }
-`;
 const TextWrapper = styled.div`
   margin: 0 auto;
   padding: 0;
@@ -154,19 +101,7 @@ const TextWrapper = styled.div`
   }
 `;
 
-const StageTitle = styled.h4`
-  font-family: Manrope, sans-serif;
-  font-weight: 700;
-  margin-top: 16px;
-  font-size: 16px;
-  display: flex;
-
-  @media (max-width: 619px) {
-    margin-top: 0;
-  }
-`;
-
-const StageParagraph = styled.p`
+const ColumnParagraph = styled.p`
   font-family: Manrope, sans-serif;
   max-width: 400px;
   width: 100%;
@@ -181,11 +116,7 @@ export {
   SectionWrapper,
   ColumnWrapper,
   Column,
-  StageWrapper,
-  StageNumber,
-  StageLine,
   ColumnTitle,
   TextWrapper,
-  StageTitle,
-  StageParagraph
+  ColumnParagraph
 };

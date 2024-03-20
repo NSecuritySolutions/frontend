@@ -4,10 +4,10 @@ import {
   Section,
   SectionWrapper,
   ColumnTitle,
-  ColumnWrapper,
   Column,
-  StageParagraph,
-  TextWrapper
+  ColumnParagraph,
+  TextWrapper,
+  ColumnWrapper
 } from './styled.ts';
 
 const OurTeam = () => {
@@ -19,15 +19,15 @@ const OurTeam = () => {
             <TextWrapper>
               <ColumnTitle>Наша команда</ColumnTitle>
 
-              <StageParagraph>
+              <ColumnParagraph>
                 Уже более 10-ти лет мы занимаемся системами
                 <br />
                 безопасности. Системы видеонаблюдения, СКУД,
                 <br /> охранная и пожарная сигнализации. Огромный опыт <br />
-                работы, начиная от жилых квартир, заканчивая <br /> крупными
-                производственными комплексами.
+                работы, начиная от жилых квартир, заканчивая
+                <br /> крупными производственными комплексами.
                 <br /> Найдем решения под любые задачи и бюджет.
-              </StageParagraph>
+              </ColumnParagraph>
             </TextWrapper>
           </Column>
         </ColumnWrapper>
