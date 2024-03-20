@@ -135,7 +135,7 @@ const StageLine = styled.div`
   border-style: solid;
   border-width: 1px;
   background-color: ${colors.darkPrimary};
-  width: 215px;
+  width: 175px;
   height: 1px;
   margin: auto 0;
 
