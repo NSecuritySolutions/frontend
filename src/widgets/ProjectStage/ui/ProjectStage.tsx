@@ -9,7 +9,8 @@ import {
   StageLine,
   SectionTitle,
   StageTitle,
-  StageParagraph
+  StageParagraph,
+  TextWrapper
 } from './styled.ts';
 
 const ProjectStage = () => {
@@ -18,14 +19,16 @@ const ProjectStage = () => {
       <SectionWrapper>
         <SectionTitle>Этапы работ</SectionTitle>
         <ColumnWrapper>
-          {projectMilestones.map(item => (
-            <Column>
+          {projectMilestones.map((item, i) => (
+            <Column key={i}>
               <StageWrapper>
                 <StageNumber>{item.id}</StageNumber>
                 <StageLine />
               </StageWrapper>
-              <StageTitle>{item.title}</StageTitle>
-              <StageParagraph>{item.text}</StageParagraph>
+              <TextWrapper>
+                <StageTitle>{item.title}</StageTitle>
+                <StageParagraph>{item.text}</StageParagraph>
+              </TextWrapper>
             </Column>
           ))}
         </ColumnWrapper>
