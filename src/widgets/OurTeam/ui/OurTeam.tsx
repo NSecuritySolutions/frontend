@@ -1,5 +1,4 @@
-import { TeamContacts } from 'src/shared/constants/texts/our-team.ts';
-
+import { ManagerCard } from 'src/widgets/ManagerCard/index.ts';
 import {
   Section,
   SectionWrapper,
@@ -7,7 +6,8 @@ import {
   Column,
   ColumnParagraph,
   TextWrapper,
-  ColumnWrapper
+  ColumnWrapper,
+  ContactsWrapper
 } from './styled.ts';
 
 const OurTeam = () => {
@@ -18,7 +18,6 @@ const OurTeam = () => {
           <Column>
             <TextWrapper>
               <ColumnTitle>Наша команда</ColumnTitle>
-
               <ColumnParagraph>
                 Уже более 10-ти лет мы занимаемся системами
                 <br />
@@ -30,6 +29,9 @@ const OurTeam = () => {
               </ColumnParagraph>
             </TextWrapper>
           </Column>
+          <ContactsWrapper>
+            <ManagerCard></ManagerCard>
+          </ContactsWrapper>
         </ColumnWrapper>
       </SectionWrapper>
     </Section>

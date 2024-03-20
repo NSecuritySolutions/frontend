@@ -78,6 +78,8 @@ const ColumnWrapper = styled.div`
 `;
 
 const Column = styled.div`
+  display: flex;
+  flex-direction: row;
   @media (max-width: 940px) {
     width: 100%;
   }
@@ -111,6 +113,12 @@ const ColumnParagraph = styled.p`
   line-height: 1.5;
   letter-spacing: -0.5px;
 `;
+
+const ContactsWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+`;
 export {
   Section,
   SectionWrapper,
@@ -118,5 +126,6 @@ export {
   Column,
   ColumnTitle,
   TextWrapper,
-  ColumnParagraph
+  ColumnParagraph,
+  ContactsWrapper
 };
