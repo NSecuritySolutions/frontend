@@ -2,7 +2,7 @@ import colors from 'src/shared/constants/colors';
 
 import styled from 'styled-components';
 
-const CardContainer = styled.div`
+const CardContainer = styled.article`
   display: flex;
   flex-direction: column;
   max-width: 180px;
