@@ -1,11 +1,10 @@
-import { Title } from './styled';
+import { ProjectStage } from 'src/widgets/ProjectStage';
 
 const MainPage = () => {
   return (
-    <Title>
-      Установка систем безопасности в Новосибирске и Новосибирской области для
-      дома и Вашего бизнеса
-    </Title>
+    <>
+      <ProjectStage />
+    </>
   );
 };
 

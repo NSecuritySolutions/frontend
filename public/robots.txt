@@ -1,0 +1,12 @@
+User-agent: *
+
+Disallow: /*?
+Disallow: /*.json$
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /assets/
+
+
+Host: video.ru
+
+Sitemap: http://video.ru/sitemap.xml
