@@ -1,3 +1,4 @@
+import { Logo } from 'src/shared/components/Logo';
 import {
   FooterBottom,
   FooterBottomContainer,
@@ -5,16 +6,23 @@ import {
   FooterDeveloperLink,
   FooterRights,
   FooterRightsText,
+  FooterSocialContainer,
   FooterTop,
   FooterTopGridContainer,
   FooterWrapper,
 } from './styled';
 
+import ProjectLogo from 'src/assets/icons/new-logo.svg';
+
 const Footer = () => {
   return (
     <FooterWrapper>
       <FooterTop>
-        <FooterTopGridContainer>FooterTop</FooterTopGridContainer>
+        <FooterTopGridContainer>
+          <FooterSocialContainer>
+            <Logo imageUrl={ProjectLogo} />
+          </FooterSocialContainer>
+        </FooterTopGridContainer>
       </FooterTop>
       <FooterBottom>
         <FooterBottomContainer>

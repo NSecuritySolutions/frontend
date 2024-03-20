@@ -20,6 +20,10 @@ const FooterTopGridContainer = styled.div`
   padding-bottom: 60px;
 `;
 
+const FooterSocialContainer = styled.div``;
+const FooterContactsContainer = styled.div``;
+const FooterContactContainer = styled.div``;
+
 const FooterBottom = styled.div`
   width: 100%;
   background-color: ${colors.backgroundBase3};
@@ -67,4 +71,7 @@ export {
   FooterRightsText,
   FooterDeveloperInfoBox,
   FooterDeveloperLink,
+  FooterSocialContainer,
+  FooterContactsContainer,
+  FooterContactContainer,
 };
