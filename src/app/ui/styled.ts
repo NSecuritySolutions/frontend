@@ -167,7 +167,7 @@ html {
 body {
     min-height: 100%;
     text-rendering: optimizespeed;
-    max-width: 1920px;
+   // max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
 }
