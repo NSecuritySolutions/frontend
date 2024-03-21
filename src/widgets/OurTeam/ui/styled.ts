@@ -7,7 +7,7 @@ const Section = styled.section`
   padding: 60px 0;
 
   @media (max-width: 1300px) {
-    padding: 0 20px;
+    padding: 60px 0;
     align-items: center;
     justify-content: center;
   }
@@ -29,6 +29,8 @@ const SectionWrapper = styled.div`
     max-width: 880px;
     width: 100%;
     gap: 120px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   @media (max-width: 940px) {
