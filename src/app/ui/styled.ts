@@ -1,13 +1,13 @@
-import ManropeBold from 'src/assets/fonts/Manrope-Bold.woff2';
+import ManropeBold from "src/assets/fonts/Manrope-Bold.woff2";
 
-import ManropeExtraBold from 'src/assets/fonts/Manrope-ExtraBold.woff2';
-import ManropeRegular from 'src/assets/fonts/Manrope-Regular.woff2';
-import ManropeSemiBold from 'src/assets/fonts/Manrope-SemiBold.woff2';
+import ManropeExtraBold from "src/assets/fonts/Manrope-ExtraBold.woff2";
+import ManropeRegular from "src/assets/fonts/Manrope-Regular.woff2";
+import ManropeSemiBold from "src/assets/fonts/Manrope-SemiBold.woff2";
 
-import colors from 'src/shared/constants/colors';
-import { fonts } from 'src/shared/constants/typography';
+import colors from "src/shared/constants/colors";
+import { fonts } from "src/shared/constants/typography";
 
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const AppStyles = createGlobalStyle`
 
@@ -175,6 +175,7 @@ body {
 }
 
 a {
+    font-family: ${fonts.fontFamilyManrope};
     color: inherit;
     text-decoration: inherit;
 }
