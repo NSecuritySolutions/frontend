@@ -15,8 +15,7 @@ const CardContainer = styled.article`
 const CardImg = styled.div<{ $imgUrl?: string }>`
   border-radius: 500px;
   background-color: ${colors.backgroundCardBl};
-  min-height: 180px;
-  width: 100%;
+  width: 180px;
   height: 180px;
   background: ${props => `url(${props.$imgUrl}) no-repeat center`};
   background-size: cover;

@@ -3,6 +3,7 @@ import colors from 'src/shared/constants/colors';
 import styled from 'styled-components';
 
 const Section = styled.section`
+  margin: 0 auto;
   background-color: ${colors.backgroundBase2};
   padding: 60px 0;
 
@@ -11,12 +12,17 @@ const Section = styled.section`
     align-items: center;
     justify-content: center;
   }
+
+  @media (max-width: 940px) {
+    background-color: ${colors.backgroundPrimary};
+    padding: 40px 0;
+  }
 `;
 
 const SectionWrapper = styled.div`
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   max-width: 1180px;
   width: 100%;
   padding-top: 60px;
@@ -24,6 +30,7 @@ const SectionWrapper = styled.div`
   border-radius: 20px;
   box-shadow: 2px 2px 25px 0 rgba(16, 16, 16, 0.05);
   background: ${colors.backgroundPrimary};
+
   @media (max-width: 1300px) {
     flex-direction: row;
     max-width: 880px;
@@ -35,7 +42,10 @@ const SectionWrapper = styled.div`
 
   @media (max-width: 940px) {
     flex-direction: column;
-    gap: 30px;
+    border-radius: 0;
+    max-width: 579px;
+    width: 100%;
+    box-shadow: none;
   }
 
   @media (max-width: 504px) {
@@ -78,6 +88,9 @@ const ColumnWrapper = styled.div`
     grid-template-columns: none;
     grid-template-rows: 1fr;
   }
+  @media (max-width: 940px) {
+    padding: 0;
+  }
 
   @media (max-width: 504px) {
   }
@@ -86,6 +99,7 @@ const ColumnWrapper = styled.div`
 const Column = styled.div`
   display: flex;
   flex-direction: row;
+
   @media (max-width: 940px) {
     width: 100%;
   }
@@ -100,10 +114,12 @@ const TextWrapper = styled.div`
   padding: 0;
   display: flex;
   flex-direction: column;
+
   @media (max-width: 1300px) {
     max-width: 880px;
     width: 100%;
   }
+
   @media (max-width: 619px) {
     justify-content: center;
     align-self: start;
@@ -121,8 +137,14 @@ const ColumnParagraph = styled.p`
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.5px;
+
   @media (max-width: 1300px) {
     max-width: 880px;
+    width: 100%;
+  }
+
+  @media (max-width: 619px) {
+    max-width: 277px;
     width: 100%;
   }
 `;
@@ -130,9 +152,19 @@ const ColumnParagraph = styled.p`
 const ContactsWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 20px;
+
   @media (max-width: 1300px) {
     gap: 130px;
+  }
+  @media (max-width: 940px) {
+    gap: 19.5px;
+  }
+
+  @media (max-width: 619px) {
+    flex-direction: column;
+    justify-self: center;
   }
 `;
 export {
