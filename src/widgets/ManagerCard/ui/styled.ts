@@ -12,7 +12,7 @@ const CardContainer = styled.article`
   font-size: 16px;s
 `;
 
-const CardImg = styled.div<{ $imgUrl?: string }>`
+const CardImg = styled.div<{ $imgUrl?: string; alt?: string }>`
   border-radius: 500px;
   background-color: ${colors.backgroundCardBl};
   width: 180px;

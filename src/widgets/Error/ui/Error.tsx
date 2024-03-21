@@ -4,12 +4,13 @@ import {
   ColumnConatiner,
   ColumnWrapper,
   ErrorName,
-  Div6,
+  ErrorText,
   ErrorButton,
   Img,
-  Img2,
-  Column,
-  Column2
+  ErrorImg,
+  ImgColumn,
+  TextColumn,
+  ErrorImgHidden
 } from './styled.ts';
 
 type TError = {
@@ -20,25 +21,34 @@ type TError = {
   errorMessage: string;
 };
 const Error: FC<TError> = ({
-  errorCode,
   errorText,
   errorImg,
   warningImg,
-  errorMessage
+  errorMessage,
+  errorCode
 }) => {
   return (
     <Section>
       <ColumnConatiner>
         <ColumnWrapper>
-          <Column>
+          <ImgColumn>
             <Img loading="lazy" srcSet={warningImg} />
-          </Column>
-          <Column2>
+          </ImgColumn>
+          <TextColumn>
             <ErrorName>{errorMessage}</ErrorName>
-            <Div6>{errorText}</Div6>
+            <ErrorImgHidden
+              loading="lazy"
+              srcSet={errorImg}
+              alt={`Ошибка ${errorCode} - ${errorMessage}`}
+            />
+            <ErrorText>{errorText}</ErrorText>
             <ErrorButton href="/">На главную</ErrorButton>
-          </Column2>
-          <Img2 loading="lazy" srcSet={errorImg} />
+          </TextColumn>
+          <ErrorImg
+            loading="lazy"
+            srcSet={errorImg}
+            alt={`Ошибка ${errorCode} - ${errorMessage}`}
+          />
         </ColumnWrapper>
       </ColumnConatiner>
     </Section>
