@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import colors from "../../../constants/colors";
 
 const Container = styled.div`
   display: flex;
@@ -28,6 +29,11 @@ const NavLinkStyled = styled(NavLink)`
   font-size: 16px;
   line-height: 136%;
   font-weight: 400;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: ${colors.accentInfo};
+  }
 `;
 
 export { Container, Title, List, ListItem, NavLinkStyled };

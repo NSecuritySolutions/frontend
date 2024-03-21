@@ -1,4 +1,11 @@
+import { FC } from "react";
+
 import { Logo } from "src/shared/components/Logo";
+import { navColumnLists, contacts } from "./temporaryConsts.ts";
+import { NavColumn } from "src/shared/components/NavColumn/index.ts";
+import { BtnLink } from "src/shared/components/BtnLink/index.ts";
+import colors from "src/shared/constants/colors/index.ts";
+
 import {
   FooterBottom,
   FooterBottomContainer,
@@ -23,10 +30,7 @@ import ProjectLogo from "src/assets/icons/new-logo.svg";
 import SvgLogoTelegram from "src/assets/icons/telegram.svg";
 import SvgLogoWhatsapp from "src/assets/icons/whatsapp.svg";
 
-import { navColumnLists, contacts } from "./temporaryConsts.ts";
-import { NavColumn } from "src/shared/components/NavColumn/index.ts";
-
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <FooterWrapper>
       <FooterTop>
@@ -52,6 +56,13 @@ const Footer = () => {
                 </FooterContactLink>
               </FooterContactContainer>
             ))}
+            <BtnLink
+              width="205px"
+              height="56px"
+              color={colors.darkPrimary}
+              text="Обратный звонок"
+              link="#"
+            />
           </FooterContactsContainer>
         </FooterTopGridContainer>
       </FooterTop>
