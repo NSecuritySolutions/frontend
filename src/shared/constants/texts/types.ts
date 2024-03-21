@@ -3,6 +3,12 @@ export type TProjectMilestones = {
   title: string;
   text: string;
 };
+export type TProjectReviews = {
+  id: number;
+  name: string;
+  product: string;
+  review: string;
+};
 
 export type TTeamContacts = {
   id: number;
