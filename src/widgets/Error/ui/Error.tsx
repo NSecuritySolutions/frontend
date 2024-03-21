@@ -1,4 +1,6 @@
 import { FC } from 'react';
+import { TError } from './types.ts';
+
 import {
   Section,
   ColumnConatiner,
@@ -13,13 +15,6 @@ import {
   ErrorImgHidden
 } from './styled.ts';
 
-type TError = {
-  errorCode: string;
-  errorText: string;
-  errorImg: string;
-  warningImg: string;
-  errorMessage: string;
-};
 const Error: FC<TError> = ({
   errorText,
   errorImg,

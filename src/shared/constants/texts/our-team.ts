@@ -2,13 +2,7 @@ import firstTeamMember from 'src/assets/images/team/team-image-1.png';
 import secondTeamMember from 'src/assets/images/team/team-image-2.png';
 import thirdTeamMember from 'src/assets/images/team/team-image-3.png';
 
-type TTeamContacts = {
-  id: number;
-  name: string;
-  position: string;
-  tel: string;
-  image: string;
-};
+import { TTeamContacts } from './types';
 
 export const teamContacts: TTeamContacts[] = [
   {
