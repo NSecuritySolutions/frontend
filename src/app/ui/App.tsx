@@ -1,15 +1,18 @@
 import { Outlet } from 'react-router-dom';
+import { StyleSheetManager } from 'styled-components';
 
 import AppStyles from './styled';
 
 const App = () => {
   return (
-    <>
-      <AppStyles />
-      <main>
-        <Outlet />
-      </main>
-    </>
+    <StyleSheetManager enableVendorPrefixes>
+      <>
+        <AppStyles />
+        <main>
+          <Outlet />
+        </main>
+      </>
+    </StyleSheetManager>
   );
 };
 
