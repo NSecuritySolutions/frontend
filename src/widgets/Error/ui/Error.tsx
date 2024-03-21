@@ -1,22 +1,15 @@
 import { FC } from 'react';
 import {
   Section,
-  Div2,
+  ColumnConatiner,
   ColumnWrapper,
-  Div4,
   ErrorName,
   Div6,
-  Div7,
-  Div8,
-  Div10,
   ErrorButton,
-  Div11,
   Img,
   Img2,
   Column,
-  Column2,
-  Column3,
-  Column4
+  Column2
 } from './styled.ts';
 
 type TError = {
@@ -35,7 +28,7 @@ const Error: FC<TError> = ({
 }) => {
   return (
     <Section>
-      <Div2>
+      <ColumnConatiner>
         <ColumnWrapper>
           <Column>
             <Img loading="lazy" srcSet={warningImg} />
@@ -45,21 +38,9 @@ const Error: FC<TError> = ({
             <Div6>{errorText}</Div6>
             <ErrorButton href="/">На главную</ErrorButton>
           </Column2>
+          <Img2 loading="lazy" srcSet={errorImg} />
         </ColumnWrapper>
-      </Div2>
-      <Div7>
-        <Div8>
-          <Column3></Column3>
-          <Column4>
-            <Div10>
-              <Div11>
-                {/* {errorCode} */}
-                <Img2 loading="lazy" srcSet={errorImg} />
-              </Div11>
-            </Div10>
-          </Column4>
-        </Div8>
-      </Div7>
+      </ColumnConatiner>
     </Section>
   );
 };

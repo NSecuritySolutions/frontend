@@ -3,24 +3,32 @@ import colors from 'src/shared/constants/colors';
 import styled from 'styled-components';
 
 const Section = styled.section`
+  padding-top: 118px;
+  padding-bottom: 170px;
+  background-color: ${colors.backgroundBase2};
+`;
+
+const ColumnConatiner = styled.div`
+  position: relative;
+
+  margin: 0 auto;
   border-radius: 20px;
+  max-width: 1180px;
+  width: 100%;
+  height: 700px;
   box-shadow: 2px 2px 25px 0px rgba(16, 16, 16, 0.05);
   background-color: var(--base-01, #fff);
   display: flex;
   flex-direction: column;
-  padding: 76px 80px 8px;
+  padding: 90px 80px 8px;
   @media (max-width: 991px) {
     padding: 0 20px;
   }
 `;
 
-const Div2 = styled.div`
-  margin-left: 13px;
-  width: 539px;
-  max-width: 100%;
-`;
-
 const ColumnWrapper = styled.div`
+  max-width: 539px;
+  width: 100%;
   gap: 20px;
   display: flex;
   @media (max-width: 991px) {
@@ -57,22 +65,9 @@ const Column2 = styled.div`
   line-height: normal;
   margin-top: 14px;
   gap: 24px;
-
-  width: 85%;
+  width: 100%;
   @media (max-width: 991px) {
     width: 100%;
-  }
-`;
-
-const Div4 = styled.div`
-  display: flex;
-  margin-top: 14px;
-  flex-grow: 1;
-  flex-direction: column;
-  color: var(--text-01, #101010);
-  @media (max-width: 991px) {
-    max-width: 100%;
-    margin-top: 34px;
   }
 `;
 
@@ -80,6 +75,7 @@ const ErrorName = styled.div`
   font:
     700 36px Manrope,
     sans-serif;
+
   @media (max-width: 991px) {
     max-width: 100%;
   }
@@ -91,37 +87,6 @@ const Div6 = styled.div`
     sans-serif;
   @media (max-width: 991px) {
     max-width: 100%;
-  }
-`;
-
-const Div7 = styled.div`
-  align-self: center;
-  margin-top: 36px;
-  width: 100%;
-  max-width: 894px;
-  @media (max-width: 991px) {
-    max-width: 100%;
-  }
-`;
-
-const Div8 = styled.div`
-  gap: 20px;
-  display: flex;
-  @media (max-width: 991px) {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0px;
-  }
-`;
-
-const Column3 = styled.div`
-  display: flex;
-  flex-direction: column;
-  line-height: normal;
-  width: 29%;
-  margin-left: 0px;
-  @media (max-width: 991px) {
-    width: 100%;
   }
 `;
 
@@ -145,77 +110,25 @@ const ErrorButton = styled.a`
   }
 `;
 
-const Column4 = styled.div`
-  display: flex;
-  flex-direction: column;
-  line-height: normal;
-  width: 71%;
-  margin-left: 20px;
-  @media (max-width: 991px) {
-    width: 100%;
-  }
-`;
-
-const Div10 = styled.div`
-  display: flex;
-  margin-top: 12px;
-  flex-grow: 1;
-  flex-direction: column;
-  font-size: 300px;
-  color: #ededed;
-  font-weight: 800;
-  white-space: nowrap;
-  @media (max-width: 991px) {
-    max-width: 100%;
-    margin-top: 40px;
-    font-size: 40px;
-    white-space: initial;
-  }
-`;
-
-const Div11 = styled.div`
-  leading-trim: both;
-  text-edge: cap;
-  z-index: 0;
-  text-shadow:
-    -1px -1px 2px rgba(178, 178, 178, 0.5),
-    1px 1px 2px rgba(255, 255, 255, 0.3);
-  font-family: Manrope, sans-serif;
-
-  @media (max-width: 991px) {
-    max-width: 100%;
-    font-size: 40px;
-  }
-`;
-
 const Img2 = styled.img`
-  aspect-ratio: 1;
-  object-fit: fit;
-  object-position: center;
+  position: absolute;
+  top: 250px;
+  left: 522px;
   max-width: 556px;
   width: 100%;
   max-height: 415px;
   align-self: center;
-  max-width: 100%;
-  z-index: 3;
 `;
 
 export {
   Section,
-  Div2,
+  ColumnConatiner,
   ColumnWrapper,
-  Div4,
   ErrorName,
   Div6,
-  Div7,
-  Div8,
-  Div10,
   ErrorButton,
-  Div11,
   Img,
   Img2,
   Column,
-  Column2,
-  Column3,
-  Column4
+  Column2
 };
