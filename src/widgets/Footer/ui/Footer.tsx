@@ -22,8 +22,10 @@ import {
   FooterSocialIconLink,
   FooterSocialIconsContainer,
   FooterTop,
-  FooterTopGridContainer,
+  FooterTopContainer,
   FooterWrapper,
+  FooterBtnWrapper,
+  FooterContactsContentWrapper,
 } from "./styled";
 
 import ProjectLogo from "src/assets/icons/new-logo.svg";
@@ -34,7 +36,7 @@ const Footer: FC = () => {
   return (
     <FooterWrapper>
       <FooterTop>
-        <FooterTopGridContainer>
+        <FooterTopContainer>
           <FooterSocialContainer>
             <Logo imageUrl={ProjectLogo} />
             <FooterSocialIconsContainer>
@@ -48,23 +50,28 @@ const Footer: FC = () => {
           </FooterSocialContainer>
           <NavColumn lists={navColumnLists} />
           <FooterContactsContainer>
-            {contacts.map((contact, index) => (
-              <FooterContactContainer key={index}>
-                <FooterContactLogo src={contact.icon} />
-                <FooterContactLink href={contact.link}>
-                  {contact.text}
-                </FooterContactLink>
-              </FooterContactContainer>
-            ))}
-            <BtnLink
-              width="205px"
-              height="56px"
-              color={colors.darkPrimary}
-              text="Обратный звонок"
-              link="#"
-            />
+            <FooterContactsContentWrapper>
+              {contacts.map((contact, index) => (
+                <FooterContactContainer key={index}>
+                  <FooterContactLogo src={contact.icon} />
+                  <FooterContactLink href={contact.link}>
+                    {contact.text}
+                  </FooterContactLink>
+                </FooterContactContainer>
+              ))}
+            </FooterContactsContentWrapper>
+
+            <FooterBtnWrapper>
+              <BtnLink
+                width="100%"
+                height="56px"
+                color={colors.darkPrimary}
+                text="Оставить заявку"
+                link="#"
+              />
+            </FooterBtnWrapper>
           </FooterContactsContainer>
-        </FooterTopGridContainer>
+        </FooterTopContainer>
       </FooterTop>
       <FooterBottom>
         <FooterBottomContainer>

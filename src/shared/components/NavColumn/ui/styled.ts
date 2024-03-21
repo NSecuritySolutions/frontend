@@ -3,8 +3,17 @@ import styled from "styled-components";
 import colors from "../../../constants/colors";
 
 const Container = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+
+  @media (max-width: 1300px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 879px) {
+    display: none;
+  }
 `;
 
 const Title = styled.h3`
