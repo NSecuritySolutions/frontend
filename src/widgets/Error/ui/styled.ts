@@ -2,7 +2,7 @@ import colors from 'src/shared/constants/colors';
 
 import styled from 'styled-components';
 
-const Div = styled.div`
+const Section = styled.section`
   border-radius: 20px;
   box-shadow: 2px 2px 25px 0px rgba(16, 16, 16, 0.05);
   background-color: var(--base-01, #fff);
@@ -20,7 +20,7 @@ const Div2 = styled.div`
   max-width: 100%;
 `;
 
-const Div3 = styled.div`
+const ColumnWrapper = styled.div`
   gap: 20px;
   display: flex;
   @media (max-width: 991px) {
@@ -55,8 +55,10 @@ const Column2 = styled.div`
   display: flex;
   flex-direction: column;
   line-height: normal;
+  margin-top: 14px;
+  gap: 24px;
+
   width: 85%;
-  margin-left: 20px;
   @media (max-width: 991px) {
     width: 100%;
   }
@@ -74,7 +76,7 @@ const Div4 = styled.div`
   }
 `;
 
-const Div5 = styled.div`
+const ErrorName = styled.div`
   font:
     700 36px Manrope,
     sans-serif;
@@ -84,7 +86,6 @@ const Div5 = styled.div`
 `;
 
 const Div6 = styled.div`
-  margin-top: 24px;
   font:
     400 16px Manrope,
     sans-serif;
@@ -124,13 +125,17 @@ const Column3 = styled.div`
   }
 `;
 
-const Div9 = styled.div`
+const ErrorButton = styled.a`
+  margin-top: 12px;
+  display: flex;
   justify-content: center;
   border-radius: 12px;
   background-color: var(--primary, #fcc12d);
   color: var(--text-01, #101010);
+  max-width: 160px;
   width: 100%;
-  padding: 18px 36px;
+  min-height: 56px;
+  padding: 18px 6px;
   font:
     800 15px/133% Manrope,
     sans-serif;
@@ -196,16 +201,16 @@ const Img2 = styled.img`
 `;
 
 export {
-  Div,
+  Section,
   Div2,
-  Div3,
+  ColumnWrapper,
   Div4,
-  Div5,
+  ErrorName,
   Div6,
   Div7,
   Div8,
   Div10,
-  Div9,
+  ErrorButton,
   Div11,
   Img,
   Img2,

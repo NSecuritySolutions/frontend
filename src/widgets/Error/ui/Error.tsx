@@ -1,15 +1,15 @@
 import { FC } from 'react';
 import {
-  Div,
+  Section,
   Div2,
-  Div3,
+  ColumnWrapper,
   Div4,
-  Div5,
+  ErrorName,
   Div6,
   Div7,
   Div8,
   Div10,
-  Div9,
+  ErrorButton,
   Div11,
   Img,
   Img2,
@@ -34,20 +34,18 @@ const Error: FC<TError> = ({
   errorMessage
 }) => {
   return (
-    <Div>
+    <Section>
       <Div2>
-        <Div3>
+        <ColumnWrapper>
           <Column>
             <Img loading="lazy" srcSet={warningImg} />
           </Column>
           <Column2>
-            <Div4>
-              <Div5>{errorMessage}</Div5>
-              <Div6>{errorText}</Div6>
-              <Div9>На главную</Div9>
-            </Div4>
+            <ErrorName>{errorMessage}</ErrorName>
+            <Div6>{errorText}</Div6>
+            <ErrorButton href="/">На главную</ErrorButton>
           </Column2>
-        </Div3>
+        </ColumnWrapper>
       </Div2>
       <Div7>
         <Div8>
@@ -62,7 +60,7 @@ const Error: FC<TError> = ({
           </Column4>
         </Div8>
       </Div7>
-    </Div>
+    </Section>
   );
 };
 
