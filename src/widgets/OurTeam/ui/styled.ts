@@ -71,6 +71,10 @@ const ColumnWrapper = styled.div`
   gap: 40px;
 
   @media (max-width: 1300px) {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 1fr;
   }
 
   @media (max-width: 504px) {
@@ -94,7 +98,10 @@ const TextWrapper = styled.div`
   padding: 0;
   display: flex;
   flex-direction: column;
-
+  @media (max-width: 1300px) {
+    max-width: 880px;
+    width: 100%;
+  }
   @media (max-width: 619px) {
     justify-content: center;
     align-self: start;
@@ -112,12 +119,19 @@ const ColumnParagraph = styled.p`
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.5px;
+  @media (max-width: 1300px) {
+    max-width: 880px;
+    width: 100%;
+  }
 `;
 
 const ContactsWrapper = styled.div`
   display: flex;
   flex-direction: row;
   gap: 20px;
+  @media (max-width: 1300px) {
+    gap: 130px;
+  }
 `;
 export {
   Section,
