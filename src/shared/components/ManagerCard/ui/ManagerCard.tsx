@@ -12,7 +12,7 @@ const ManagerCard = () => {
     <>
       {teamContacts.map(item => (
         <CardContainer key={item.id}>
-          <CardImg $imgUrl={item.image} />
+          <CardImg $imgUrl={item.image} alt="Фотография сотрудника" />
           <CardName>{item.name}</CardName>
           <CardPosition>{item.position}</CardPosition>
           <CardTel>{item.tel}</CardTel>

@@ -1,14 +1,8 @@
-import firstTeamMember from 'src/assets/images/feedback//webp/feedback-image-1.webp';
-import secondTeamMember from 'src/assets/images/feedback/webp/feedback-image-2.webp';
-import thirdTeamMember from 'src/assets/images/feedback/webp/feedback-image-3.webp';
+import firstTeamMember from 'src/assets/images/team/team-image-1.png';
+import secondTeamMember from 'src/assets/images/team/team-image-2.png';
+import thirdTeamMember from 'src/assets/images/team/team-image-3.png';
 
-type TTeamContacts = {
-  id: number;
-  name: string;
-  position: string;
-  tel: string;
-  image: string;
-};
+import { TTeamContacts } from './types';
 
 export const teamContacts: TTeamContacts[] = [
   {

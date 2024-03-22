@@ -1,4 +1,4 @@
-import { ManagerCard } from 'src/widgets/ManagerCard/index.ts';
+import { ManagerCard } from 'src/shared/components/ManagerCard/index.ts';
 import {
   Section,
   SectionWrapper,
