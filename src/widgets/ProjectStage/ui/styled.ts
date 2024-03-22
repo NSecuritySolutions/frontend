@@ -1,6 +1,6 @@
-import colors from 'src/shared/constants/colors';
+import colors from "src/shared/constants/colors";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Section = styled.section`
   background-color: ${colors.backgroundBase2};
@@ -66,7 +66,6 @@ const ColumnWrapper = styled.div`
   padding: 20px 0;
   display: flex;
   flex-direction: row;
-  aligh-items: center;
   justify-content: center;
   gap: 20px;
 
@@ -196,5 +195,5 @@ export {
   SectionTitle,
   TextWrapper,
   StageTitle,
-  StageParagraph
+  StageParagraph,
 };
