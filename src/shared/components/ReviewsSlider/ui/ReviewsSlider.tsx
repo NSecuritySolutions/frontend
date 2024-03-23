@@ -3,19 +3,22 @@ import { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { projectReviews } from '../../../constants/texts/reviews.ts';
+import {
+  TEXT_LIMIT,
+  projectReviews
+} from '../../../constants/texts/reviews.ts';
 import {
   ReviewsContainer,
   SliderContainer,
   ReviewsTitle,
   ReviewsParagraph,
   ReviewsText,
-  CustomDot
+  CustomDot,
+  ReviewsLink
 } from './styled.ts';
 
-const ReviewsCarousel = () => {
+const ReviewsSlider = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
-  // Добавляем обработчик события после смены слайда
   const handleAfterChange = (slideIndex: number) => {
     setCurrentSlide(slideIndex);
   };
@@ -58,11 +61,14 @@ const ReviewsCarousel = () => {
       }
     ],
     customPaging: function (i: number) {
+      //@TODO - заменить floor на ceil?
       let activePage = 0;
-      if (window.innerWidth >= 1300) {
-        activePage = Math.floor(currentSlide / 3);
-      } else if (window.innerWidth >= 900) {
-        activePage = Math.floor(currentSlide / 2);
+      if (window.innerWidth >= 900) {
+        activePage = Math.ceil(currentSlide / 3);
+      } else if (window.innerWidth >= 619) {
+        activePage = Math.ceil(currentSlide / 2);
+        // console.log(currentSlide, 'cur-slide');
+        // console.log(activePage, 'active page');
       } else {
         activePage = currentSlide;
       }
@@ -70,14 +76,27 @@ const ReviewsCarousel = () => {
     }
   };
 
+  function truncate(str: string, maxlength: number) {
+    if (str.length > maxlength) {
+      return str.substring(0, maxlength - 3) + '...';
+    } else {
+      return str;
+    }
+  }
+
   return (
     <SliderContainer className="slider-container">
       <Slider {...settings} afterChange={handleAfterChange}>
         {projectReviews.map((item, i) => (
           <ReviewsContainer className="slick-slide" key={i}>
-            <ReviewsTitle>{item.name}</ReviewsTitle>
+            <ReviewsTitle>{item.name} </ReviewsTitle>
             <ReviewsParagraph>{item.product}</ReviewsParagraph>
-            <ReviewsText>{item.review}</ReviewsText>
+            <ReviewsText>
+              {truncate(item.review, TEXT_LIMIT)}
+              {item.review.length >= TEXT_LIMIT && (
+                <ReviewsLink href={item.link}>(Читать далее)</ReviewsLink>
+              )}
+            </ReviewsText>
           </ReviewsContainer>
         ))}
       </Slider>
@@ -85,4 +104,4 @@ const ReviewsCarousel = () => {
   );
 };
 
-export default ReviewsCarousel;
+export default ReviewsSlider;

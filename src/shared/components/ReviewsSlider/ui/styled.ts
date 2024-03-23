@@ -8,7 +8,7 @@ const SliderContainer = styled.div`
   padding-bottom: 40px;
   max-width: 900px;
   width: 100%;
-  background-color: #f6f6f6;
+  background-color: ${colors.backgroundBase2};
 `;
 const ReviewsContainer = styled.article`
   display: flex !important;
@@ -17,8 +17,9 @@ const ReviewsContainer = styled.article`
   border-radius: 20px;
   padding: 25px;
   max-width: 280px;
+  height: 289px;
   width: 100%;
-  background-color: #fff;
+  background-color: ${colors.backgroundPrimary};
   font-family: Manrope, sans-serif;
 `;
 
@@ -45,7 +46,15 @@ const CustomDot = styled.div<{ $active?: boolean }>`
   height: 13px;
   border-radius: 50%;
   margin-top: 10px;
-  background-color: ${props => (props.$active ? '#fcc12d' : 'gray')};
+  background-color: ${props =>
+    props.$active ? `${colors.btnPrimary}` : '#d7d7d7'};
+`;
+
+const ReviewsLink = styled.a<{ $active?: boolean }>`
+  cursor: poinetr;
+  font-size: 14px;
+  color: ${colors.darkPrimary};
+  opacity: 0.5;
 `;
 
 export {
@@ -54,5 +63,6 @@ export {
   ReviewsTitle,
   ReviewsParagraph,
   ReviewsText,
-  CustomDot
+  CustomDot,
+  ReviewsLink
 };

@@ -8,6 +8,8 @@ export type TProjectReviews = {
   name: string;
   product: string;
   review: string;
+  link?: string | undefined;
+  img?: string | undefined;
 };
 
 export type TTeamContacts = {
