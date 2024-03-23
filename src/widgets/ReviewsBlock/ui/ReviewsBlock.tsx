@@ -3,12 +3,19 @@ import {
   SectionWrapper,
   ColumnTitle,
   Column,
-  ColumnParagraph,
+  ImageWrapper,
   TextWrapper,
   ColumnWrapper,
-  ContactsWrapper
+  ContactsWrapper,
+  ColumnImage,
+  CardImg
 } from './styled.ts';
+
 import { ReviewsSlider } from 'src/shared/components/ReviewsSlider/index.ts';
+
+import yandexLogo from 'src/assets/images/yandex/png/yandex.png';
+
+import { projectReviews } from 'src/shared/constants/texts/reviews.ts';
 
 const ReviewsBlock = () => {
   return (
@@ -17,14 +24,13 @@ const ReviewsBlock = () => {
         <ColumnWrapper>
           <Column>
             <TextWrapper>
-              <ColumnTitle>Наша команда</ColumnTitle>
-              <ColumnParagraph>
-                Уже более 10-ти лет мы занимаемся системами безопасности.
-                Системы видеонаблюдения, СКУД, охранная и пожарная сигнализации.
-                Огромный опыт работы, начиная от жилых квартир, заканчивая
-                крупными производственными комплексами. Найдем решения под любые
-                задачи и бюджет.
-              </ColumnParagraph>
+              <ColumnTitle>О нас говорят</ColumnTitle>
+              <ImageWrapper>
+                {projectReviews.map(item => (
+                  <CardImg key={item.id} $imgUrl={item?.img} alt="Аватар" />
+                ))}
+              </ImageWrapper>
+              <ColumnImage src={yandexLogo}></ColumnImage>
             </TextWrapper>
           </Column>
           <ContactsWrapper>

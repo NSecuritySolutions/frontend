@@ -1,6 +1,7 @@
 import colors from 'src/shared/constants/colors';
 
 import styled from 'styled-components';
+import yandexLogo from 'src/assets/images/yandex/png/yandex.png';
 
 const Section = styled.section`
   margin: 0 auto;
@@ -27,9 +28,7 @@ const SectionWrapper = styled.div`
   width: 100%;
   padding-top: 60px;
   padding-bottom: 60px;
-  border-radius: 20px;
-  box-shadow: 2px 2px 25px 0 rgba(16, 16, 16, 0.05);
-  background: ${colors.backgroundPrimary};
+  background: ${colors.backgroundBase2};
 
   @media (max-width: 1300px) {
     flex-direction: row;
@@ -78,9 +77,9 @@ const ColumnTitle = styled.h2`
 const ColumnWrapper = styled.div`
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(1, minmax(120px, 400px) minmax(120px, 580px));
+  // grid-template-columns: repeat(1, minmax(120px, 400px) minmax(120px, 580px));
+  grid-template-columns: repeat(1, 1fr 3fr);
   column-gap: 20px;
-  gap: 40px;
 
   @media (max-width: 1300px) {
     padding: 40px;
@@ -108,12 +107,20 @@ const Column = styled.div`
     flex-direction: row;
   }
 `;
-
+const CardImg = styled.div<{ $imgUrl?: string; alt?: string }>`
+  border-radius: 500px;
+  background-color: ${colors.backgroundCardBl};
+  width: 48px;
+  height: 48px;
+  background: ${props => `url(${props.$imgUrl}) no-repeat center`};
+  background-size: cover;
+`;
 const TextWrapper = styled.div`
   margin: 0 auto;
   padding: 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 
   @media (max-width: 1300px) {
     max-width: 880px;
@@ -128,7 +135,7 @@ const TextWrapper = styled.div`
   }
 `;
 
-const ColumnParagraph = styled.p`
+const ImageWrapper = styled.p`
   font-family: Manrope, sans-serif;
   max-width: 400px;
   width: 100%;
@@ -137,6 +144,9 @@ const ColumnParagraph = styled.p`
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.5px;
+  display: flex;
+  flex-direction: row;
+  gap: 11.5px;
 
   @media (max-width: 1300px) {
     max-width: 880px;
@@ -148,6 +158,17 @@ const ColumnParagraph = styled.p`
     width: 100%;
   }
 `;
+
+const ColumnImage = styled.img`
+  margin: 0 0 0 0;
+  padding: 162px 0 0 0;
+  max-width: 280px;
+  width: 100%;
+`;
+
+ColumnImage.defaultProps = {
+  src: yandexLogo
+};
 
 const ContactsWrapper = styled.div`
   display: flex;
@@ -174,6 +195,8 @@ export {
   Column,
   ColumnTitle,
   TextWrapper,
-  ColumnParagraph,
-  ContactsWrapper
+  ImageWrapper,
+  ContactsWrapper,
+  ColumnImage,
+  CardImg
 };
