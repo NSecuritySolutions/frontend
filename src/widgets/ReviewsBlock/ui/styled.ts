@@ -76,18 +76,18 @@ const ColumnTitle = styled.h2`
 const ColumnWrapper = styled.div`
   margin: 0 auto;
   display: grid;
-  // grid-template-columns: repeat(1, minmax(120px, 400px) minmax(120px, 580px));
   grid-template-columns: repeat(1, 1fr 3fr);
   column-gap: 20px;
 
   @media (max-width: 1300px) {
-    padding: 40px;
+    padding: 40px 0;
     display: grid;
-    grid-template-columns: none;
-    grid-template-rows: 1fr;
   }
+
   @media (max-width: 940px) {
     padding: 0;
+    grid-template-columns: none;
+    grid-template-rows: 1fr;
   }
 
   @media (max-width: 504px) {
@@ -106,12 +106,12 @@ const Column = styled.div`
     flex-direction: row;
   }
 `;
-const CardImg = styled.div<{ $imgUrl?: string; alt?: string }>`
+const CardImg = styled.img<{ $imgUrl?: string; alt?: string }>`
   border-radius: 500px;
   background-color: ${colors.backgroundCardBl};
   width: 48px;
   height: 48px;
-  background: ${props => `url(${props.$imgUrl}) no-repeat center`};
+  background: ${props => `url(${props?.$imgUrl}) no-repeat center`};
   background-size: cover;
 `;
 const TextWrapper = styled.div`
@@ -163,6 +163,14 @@ const ColumnImage = styled.img`
   padding: 162px 0 0 0;
   max-width: 280px;
   width: 100%;
+
+  @media (max-width: 940px) {
+    padding: 30px 0 0 0;
+  }
+
+  @media (max-width: 619px) {
+    display: none;
+  }
 `;
 
 ColumnImage.defaultProps = {
@@ -178,6 +186,7 @@ const ContactsWrapper = styled.div`
   @media (max-width: 1300px) {
     gap: 130px;
   }
+
   @media (max-width: 940px) {
     gap: 19.5px;
   }

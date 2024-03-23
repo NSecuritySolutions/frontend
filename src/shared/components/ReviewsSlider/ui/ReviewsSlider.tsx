@@ -7,7 +7,7 @@ import {
   TEXT_LIMIT,
   TITLE_LIMIT,
   projectReviews
-} from '../../../constants/texts/reviews.ts';
+} from 'src/shared/constants/texts/reviews.ts';
 import {
   ReviewsContainer,
   SliderContainer,
@@ -39,14 +39,14 @@ const ReviewsSlider = () => {
       {
         breakpoint: 1300,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
           dots: true
         }
       },
       {
-        breakpoint: 900,
+        breakpoint: 1180,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -62,14 +62,11 @@ const ReviewsSlider = () => {
       }
     ],
     customPaging: function (i: number) {
-      //@TODO - заменить floor на ceil?
       let activePage = 0;
-      if (window.innerWidth >= 900) {
+      if (window.innerWidth >= 1300) {
         activePage = Math.ceil(currentSlide / 3);
       } else if (window.innerWidth >= 619) {
         activePage = Math.ceil(currentSlide / 2);
-        // console.log(currentSlide, 'cur-slide');
-        // console.log(activePage, 'active page');
       } else {
         activePage = currentSlide;
       }
