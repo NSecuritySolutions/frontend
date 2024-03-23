@@ -15,7 +15,6 @@ const Section = styled.section`
   }
 
   @media (max-width: 940px) {
-    background-color: ${colors.backgroundPrimary};
     padding: 40px 0;
   }
 `;

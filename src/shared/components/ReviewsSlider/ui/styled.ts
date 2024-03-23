@@ -9,6 +9,16 @@ const SliderContainer = styled.div`
   max-width: 900px;
   width: 100%;
   background-color: ${colors.backgroundBase2};
+  @media (max-width: 1300px) {
+    max-width: 580px;
+  }
+  @media (max-width: 940px) {
+    max-width: 580px;
+  }
+
+  @media (max-width: 619px) {
+    max-width: 280px;
+  }
 `;
 const ReviewsContainer = styled.article`
   display: flex !important;

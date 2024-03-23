@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {
   TEXT_LIMIT,
+  TITLE_LIMIT,
   projectReviews
 } from '../../../constants/texts/reviews.ts';
 import {
@@ -89,8 +90,10 @@ const ReviewsSlider = () => {
       <Slider {...settings} afterChange={handleAfterChange}>
         {projectReviews.map((item, i) => (
           <ReviewsContainer className="slick-slide" key={i}>
-            <ReviewsTitle>{item.name} </ReviewsTitle>
-            <ReviewsParagraph>{item.product}</ReviewsParagraph>
+            <ReviewsTitle>{truncate(item.name, TITLE_LIMIT)} </ReviewsTitle>
+            <ReviewsParagraph>
+              {truncate(item.product, TITLE_LIMIT)}
+            </ReviewsParagraph>
             <ReviewsText>
               {truncate(item.review, TEXT_LIMIT)}
               {item.review.length >= TEXT_LIMIT && (

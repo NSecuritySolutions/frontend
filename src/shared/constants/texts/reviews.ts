@@ -1,6 +1,7 @@
 import { TProjectReviews } from './types';
 
 export const TEXT_LIMIT: number = 145;
+export const TITLE_LIMIT: number = 23;
 
 export const projectReviews: TProjectReviews[] = [
   {
