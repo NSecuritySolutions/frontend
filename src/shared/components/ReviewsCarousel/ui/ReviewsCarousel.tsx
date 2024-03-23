@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -7,18 +9,28 @@ import {
   SliderContainer,
   ReviewsTitle,
   ReviewsParagraph,
-  ReviewsText
+  ReviewsText,
+  CustomDot
 } from './styled.ts';
 
 const ReviewsCarousel = () => {
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  // Добавляем обработчик события после смены слайда
+  const handleAfterChange = (slideIndex: number) => {
+    setCurrentSlide(slideIndex);
+  };
+
   const settings = {
-    className: 'slide555',
+    className: 'reviews-slider',
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 100,
     slidesToShow: 3,
     slidesToScroll: 3,
-    lazyLoad: true,
+    arrows: false,
+
+    appendDots: (dots: boolean) => <div>{dots}</div>,
+
     responsive: [
       {
         breakpoint: 1300,
@@ -44,11 +56,23 @@ const ReviewsCarousel = () => {
           slidesToScroll: 1
         }
       }
-    ]
+    ],
+    customPaging: function (i: number) {
+      let activePage = 0;
+      if (window.innerWidth >= 1300) {
+        activePage = Math.floor(currentSlide / 3);
+      } else if (window.innerWidth >= 900) {
+        activePage = Math.floor(currentSlide / 2);
+      } else {
+        activePage = currentSlide;
+      }
+      return <CustomDot $active={i === activePage} />;
+    }
   };
+
   return (
     <SliderContainer className="slider-container">
-      <Slider {...settings}>
+      <Slider {...settings} afterChange={handleAfterChange}>
         {projectReviews.map((item, i) => (
           <ReviewsContainer className="slick-slide" key={i}>
             <ReviewsTitle>{item.name}</ReviewsTitle>
