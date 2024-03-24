@@ -4,8 +4,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
 
 const SliderContainer = styled.div`
-  padding-top: 40px;
-  padding-bottom: 40px;
   max-width: 900px;
   width: 100%;
   background-color: ${colors.backgroundBase2};
@@ -31,6 +29,14 @@ const ReviewsContainer = styled.article`
   width: 100%;
   background-color: ${colors.backgroundPrimary};
   font-family: Manrope, sans-serif;
+
+  @media (max-width: 940px) {
+    margin-top: 30px;
+  }
+
+  @media (max-width: 619px) {
+    margin-top: 30px;
+  }
 `;
 
 const ReviewsTitle = styled.h3`

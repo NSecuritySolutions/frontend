@@ -6,10 +6,9 @@ import yandexLogo from 'src/assets/images/yandex/png/yandex.png';
 const Section = styled.section`
   margin: 0 auto;
   background-color: ${colors.backgroundBase2};
-  padding: 60px 0;
 
   @media (max-width: 1300px) {
-    padding: 60px 0;
+    // padding: 60px 0;
     align-items: center;
     justify-content: center;
   }
@@ -160,7 +159,7 @@ const ImageWrapper = styled.p`
 
 const ColumnImage = styled.img`
   margin: 0 0 0 0;
-  padding: 162px 0 0 0;
+  padding: 127px 0 0 0;
   max-width: 280px;
   width: 100%;
 
