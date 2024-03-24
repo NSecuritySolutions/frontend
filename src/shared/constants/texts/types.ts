@@ -37,3 +37,12 @@ export type TError404 = {
   warningImg: string;
   errorMessage: string;
 };
+
+export type TWorkExamples = {
+  id: number;
+  cardTitle: string;
+  cardText: string;
+  cardButton: string;
+  cardLink: string;
+  cardImage: string;
+};

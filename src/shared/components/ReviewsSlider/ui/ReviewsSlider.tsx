@@ -32,6 +32,7 @@ const ReviewsSlider = () => {
     slidesToShow: 3,
     slidesToScroll: 3,
     arrows: false,
+    focusOnSelect: true,
 
     appendDots: (dots: boolean) => <div>{dots}</div>,
 

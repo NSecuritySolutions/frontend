@@ -70,7 +70,7 @@ const ColumnTitle = styled.h2`
   }
 
   @media (max-width: 619px) {
-    max-width: 268px;
+    max-width: 277px;
     width: 100%;
     align-self: center;
   }
