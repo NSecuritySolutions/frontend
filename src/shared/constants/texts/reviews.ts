@@ -17,7 +17,7 @@ export const projectReviews: TProjectReviews[] = [
     name: 'Сергей Е.',
     product: 'Система видеонаблюдения',
     review:
-      'Большое спасибо за установку системы видеонаблюдения. Все выполнили быстро и качественно. Нам очень понравилось, будем рекомендо Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vitae atque illo soluta voluptas inventore cum perspiciatis laudantium esse rerum eos tenetur harum similique consectetur distinctio ducimus, necessitatibus, reprehenderit earum.',
+      'Большое спасибо за установку системы видеонаблюдения. Все выполнили быстро и качественно. Нам очень понравилось, будем рекомендовать вас. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vitae atque illo soluta voluptas inventore cum perspiciatis laudantium esse rerum eos tenetur harum similique consectetur distinctio ducimus, necessitatibus, reprehenderit earum.',
     link: 'https://market.yandex.ru/',
     img: 'src/assets/images/feedback/png/feedback-image-2.jpg'
   },
@@ -26,7 +26,7 @@ export const projectReviews: TProjectReviews[] = [
     name: 'Евгения К.',
     product: 'Система видеонаблюдения',
     review:
-      'Большое спасибо за установку системы видеонаблюдения. Все выполнили быстро и качественно. Нам очень понравилось, будем рекомендо...Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vitae atque illo soluta voluptas inventore cum perspiciatis laudantium esse rerum eos tenetur harum similique consectetur distinctio ducimus, necessitatibus, reprehenderit earum.',
+      'Большое спасибо за установку системы видеонаблюдения. Все выполнили быстро и качественно. Нам очень понравилось, будем рекомендо. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vitae atque illo soluta voluptas inventore cum perspiciatis laudantium esse rerum eos tenetur harum similique consectetur distinctio ducimus, necessitatibus, reprehenderit earum.',
     link: 'https://market.yandex.ru/',
     img: 'src/assets/images/feedback/png/feedback-image-3.jpg'
   },
@@ -35,7 +35,7 @@ export const projectReviews: TProjectReviews[] = [
     name: 'Анна С.',
     product: 'Система видеонаблюдения',
     review:
-      'Большое спасибо за установку системы видеонаблюдения. Все выполнили быстро и качественно. Нам очень понравилось. ',
+      'Большое спасибо за установку системы видеонаблюдения. Все выполнили быстро и качественно. Нам очень понравилось.',
     link: 'https://market.yandex.ru/',
     img: 'src/assets/images/feedback/png/feedback-image-1.jpg'
   },
