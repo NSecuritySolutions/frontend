@@ -1,4 +1,5 @@
 import { OurTeam } from 'src/widgets/OurTeam';
+import { OurClients } from 'src/widgets/OurClients';
 import { ProjectStage } from 'src/widgets/ProjectStage';
 
 const MainPage = () => {
@@ -6,6 +7,7 @@ const MainPage = () => {
     <>
       <ProjectStage />
       <OurTeam></OurTeam>
+      <OurClients />
     </>
   );
 };
