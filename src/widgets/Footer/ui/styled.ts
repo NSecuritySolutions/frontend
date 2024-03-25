@@ -10,9 +10,15 @@ const FooterWrapper = styled.footer`
   margin: 0 auto;
 `;
 
-const FooterTop = styled.div``;
+const FooterTop = styled.div`
+  @media (max-width: 1300px) {
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+  }
+`;
 
-const FooterTopGridContainer = styled.div`
+const FooterTopContainer = styled.div`
   max-width: 1180px;
   margin: 0 auto;
   border-top: 1px solid ${colors.darkSecondary};
@@ -20,6 +26,20 @@ const FooterTopGridContainer = styled.div`
   padding-bottom: 60px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1300px) {
+    max-width: 880px;
+  }
+
+  @media (max-width: 880px) {
+    max-width: 580px;
+  }
+
+  @media (max-width: 560px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
 `;
 
 const FooterSocialContainer = styled.div`
@@ -47,11 +67,22 @@ const FooterContactsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media (max-width: 560px) {
+    align-items: center;
+    gap: 40px;
+  }
 `;
 const FooterContactContainer = styled.div`
   display: flex;
   gap: 8px;
   align-items: center;
+`;
+
+const FooterContactsContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 `;
 
 const FooterContactLogo = styled.img`
@@ -67,21 +98,48 @@ const FooterContactLink = styled.a`
   max-width: 162px;
 `;
 
+const FooterBtnWrapper = styled.div`
+  width: 205px;
+  @media (max-width: 560px) {
+    width: 280px;
+  }
+`;
+
 const FooterBottom = styled.div`
   width: 100%;
   background-color: ${colors.backgroundBase3};
+
+  @media (max-width: 1300px) {
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const FooterBottomContainer = styled.div`
   max-width: 1180px;
   margin: 0 auto;
   padding: 24px 0 24px 0;
+
+  @media (max-width: 1300px) {
+    max-width: 880px;
+  }
+
+  @media (max-width: 880px) {
+    max-width: 580px;
+  }
 `;
 
 const FooterRights = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @media (max-width: 560px) {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 `;
 
 const FooterDeveloperInfoBox = styled.div`
@@ -107,7 +165,7 @@ const FooterDeveloperLink = styled.a`
 export {
   FooterWrapper,
   FooterTop,
-  FooterTopGridContainer,
+  FooterTopContainer,
   FooterBottom,
   FooterBottomContainer,
   FooterRights,
@@ -122,4 +180,6 @@ export {
   FooterSocialIcon,
   FooterContactLogo,
   FooterContactLink,
+  FooterBtnWrapper,
+  FooterContactsContentWrapper,
 };
