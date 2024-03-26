@@ -169,6 +169,8 @@ html {
 body {
     min-height: 100%;
     text-rendering: optimizespeed;
+    background-color: ${colors.backgroundBase2};
+
    // max-width: 1920px;
     margin-left: auto;
     margin-right: auto;

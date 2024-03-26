@@ -3,6 +3,7 @@ import { OurClients } from 'src/widgets/OurClients';
 import { ProjectStage } from 'src/widgets/ProjectStage';
 import { Footer } from 'src/widgets/Footer';
 import { ReviewsBlock } from 'src/widgets/ReviewsBlock';
+import { WorkExamplesSlider } from 'src/widgets/WorkExamplesSlider';
 
 const MainPage = () => {
   return (
@@ -11,6 +12,7 @@ const MainPage = () => {
       <OurTeam />
       <OurClients/>
       <ReviewsBlock />
+      <WorkExamplesSlider />
       <Footer />
     </>
   );
