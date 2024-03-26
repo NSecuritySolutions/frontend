@@ -3,14 +3,6 @@ export type TProjectMilestones = {
   title: string;
   text: string;
 };
-export type TProjectReviews = {
-  id: number;
-  name: string;
-  product: string;
-  review: string;
-  link?: string | undefined;
-  img?: string | undefined;
-};
 
 export type TTeamContacts = {
   id: number;
@@ -37,3 +29,35 @@ export type TError404 = {
   warningImg: string;
   errorMessage: string;
 };
+
+export type TQuestionType = {
+  id: number
+  question: string;
+  answer: string;
+};
+
+export type TTabs = {
+  icon: string;
+  text: string;
+  items: Array<TQuestionType>;
+};
+
+export type TAnswer = {
+  answer?: string;
+}
+
+export type TTopicProps = {
+  icon: string;
+  text: string;
+  items: Array<TQuestionType>;
+  onClick: (item: TTabs) => void;
+  chosen: TTabs | null;
+}
+
+export type TAnswerProps = {
+  id: number
+  question: string;
+  answer: string;
+  onClick: (item: TQuestionType) => void;
+  chosen: TQuestionType | null;
+}
