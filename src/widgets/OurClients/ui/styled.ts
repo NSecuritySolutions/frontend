@@ -34,6 +34,7 @@ const SectionWrapper = styled.div`
   }
 
   @media (max-width: 504px) {
+    padding: 0;
   }
 `;
 
@@ -91,15 +92,16 @@ const LogoWrapper = styled.div`
   }
 `;
 
-const LogoYandex = styled.div<{ $imgUrl?: string, $imgUrl1?: string }>`
-  background: ${props => `url(${props.$imgUrl}) no-repeat center`};
-  //background-size: cover;
+const LogoYandex = styled.div<{ $imgUrl?: string, $imgUrl1?: string, alt?: string }>`
+  background: ${props => `url(${props.$imgUrl}) no-repeat`};
+  background-position: 0px -160px;
+  background-size: cover;
   height: 160px;
   width: 160px;
 
   &:hover {
     cursor: pointer;
-    background: ${props => `url(${props.$imgUrl1}) no-repeat center`};
+    background-position: top;
   }
 
   @media (max-width: 1300px) {
@@ -107,31 +109,40 @@ const LogoYandex = styled.div<{ $imgUrl?: string, $imgUrl1?: string }>`
   }
 `;
 
-const LogoSamokat = styled.div<{ $imgUrl?: string, $imgUrl1?: string }>`
-  background: ${props => `url(${props.$imgUrl}) no-repeat center`};
-  background-size: contain;
-  height: 160px;
+const LogoSamokat = styled.div<{ $imgUrl?: string, alt?: string }>`
+  background: ${props => `url(${props.$imgUrl}) no-repeat`};
+  background-position: -0.2px -190.3px;
+  background-size: cover;
+  height: 190px;
   width: 460px;
 
   &:hover {
     cursor: pointer;
-    background: ${props => `url(${props.$imgUrl1}) no-repeat center / contain`};
+    background-position: top;
   }
 
   @media (max-width: 1300px) {
     align-self: center
   }
+
+  @media (max-width: 530px) {
+    background-position: -0.2px -124.3px;
+    background-size: cover;
+    height: 130px;
+    width: 300px;
+  }
 `;
 
-const LogoRostelecom = styled.div<{ $imgUrl?: string, $imgUrl1?: string }>`
-  background: ${props => `url(${props.$imgUrl}) no-repeat center`};
+const LogoRostelecom = styled.div<{ $imgUrl?: string, alt?: string }>`
+  background: ${props => `url(${props.$imgUrl}) no-repeat`};
+  background-position: 0px -150.9px;
   background-size: cover;
   height: 151px;
   width: 164px;
 
   &:hover {
     cursor: pointer;
-    background: ${props => `url(${props.$imgUrl1}) no-repeat center`};
+    background-position: top;
   }
 
   @media (max-width: 1300px) {
@@ -139,15 +150,16 @@ const LogoRostelecom = styled.div<{ $imgUrl?: string, $imgUrl1?: string }>`
   }
 `;
 
-const LogoAvon = styled.div<{ $imgUrl?: string, $imgUrl1?: string }>`
-  background: ${props => `url(${props.$imgUrl}) no-repeat center`};
-  background-size: contain;
+const LogoAvon = styled.div<{ $imgUrl?: string, alt?: string }>`
+  background: ${props => `url(${props.$imgUrl}) no-repeat`};
+  background-position: -1px -151.5px;
+  background-size: cover;
   height: 160px;
   width: 279px;
 
   &:hover {
     cursor: pointer;
-    background: ${props => `url(${props.$imgUrl1}) no-repeat center / contain`};
+    background-position: top;
   }
 
   @media (max-width: 1300px) {
