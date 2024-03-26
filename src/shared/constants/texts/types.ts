@@ -3,6 +3,14 @@ export type TProjectMilestones = {
   title: string;
   text: string;
 };
+export type TProjectReviews = {
+  id: number;
+  name: string;
+  product: string;
+  review: string;
+  link?: string | undefined;
+  img?: string | undefined;
+};
 
 export type TTeamContacts = {
   id: number;

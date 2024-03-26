@@ -3,7 +3,7 @@ import { TProjectMilestones } from './types';
 export const projectMilestones: TProjectMilestones[] = [
   {
     id: 1,
-    title: 'Расчет проекта под ключ ',
+    title: 'Расчет проекта под ключ',
     text: 'Наш менеджер поможет подобрать оптимальное сочетание оборудования и\u00A0функций системы безопасности под ваши задачи и\u00A0уточнит все ваши пожелания.'
   },
   {
