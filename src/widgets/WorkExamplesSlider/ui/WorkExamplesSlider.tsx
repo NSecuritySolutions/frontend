@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import colors from 'src/shared/constants/colors';
 
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -15,8 +16,14 @@ import {
   ReviewsText,
   CustomDot,
   ReviewsLink,
-  ColumnTitle
+  ColumnTitle,
+  ButtonWrapper,
+  ReviewsImg
 } from './styled.ts';
+import { BtnLink } from 'src/shared/components/BtnLink/index.ts';
+
+// @TODO  - вставить в слайд картинку
+// @TODO - постарничное выделение активной старницы
 
 const WorkExamplesSlider = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
@@ -64,7 +71,7 @@ const WorkExamplesSlider = () => {
     customPaging: function (i: number) {
       let activePage = 0;
       if (window.innerWidth >= 1300) {
-        activePage = Math.ceil(currentSlide / 4);
+        activePage = Math.ceil(currentSlide / 2);
       }
       // else if (window.innerWidth >= 619) {
       //   activePage = Math.ceil(currentSlide / 2);
@@ -86,7 +93,6 @@ const WorkExamplesSlider = () => {
   return (
     <SliderContainer className="slider-container">
       <ColumnTitle>Примеры наших работ</ColumnTitle>
-
       <Slider {...settings} afterChange={handleAfterChange}>
         {workExamples.map((item, i) => (
           <ReviewsContainer className="slick-slide" key={i}>
@@ -95,10 +101,32 @@ const WorkExamplesSlider = () => {
             </ReviewsTitle>
 
             <ReviewsText>{truncate(item.cardText, TEXT_LIMIT)}</ReviewsText>
-            <ReviewsLink href={item.cardLink}>{item.cardButton}</ReviewsLink>
+            <ReviewsLink href={item.cardLink}>Читать</ReviewsLink>
+            {item?.cardSectionButton && item?.cardSectionLink && (
+              <BtnLink
+                width="170px"
+                height="24px"
+                color={colors.darkPrimary}
+                text={item?.cardSectionButton}
+                link={item?.cardSectionLink}></BtnLink>
+            )}
+            <ReviewsImg
+              src={item.cardImage}
+              $width={item.width}
+              $top={item.top}
+              $left={item.left}
+              $right={item.right}></ReviewsImg>
           </ReviewsContainer>
         ))}
       </Slider>
+      <ButtonWrapper>
+        <BtnLink
+          width="130px"
+          height="44px"
+          color={colors.darkPrimary}
+          text="Все статьи"
+          link="/"></BtnLink>
+      </ButtonWrapper>
     </SliderContainer>
   );
 };
