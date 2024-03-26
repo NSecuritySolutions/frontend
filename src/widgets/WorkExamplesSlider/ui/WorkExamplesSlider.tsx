@@ -22,9 +22,6 @@ import {
 } from './styled.ts';
 import { BtnLink } from 'src/shared/components/BtnLink/index.ts';
 
-// @TODO  - вставить в слайд картинку
-// @TODO - постарничное выделение активной старницы
-
 const WorkExamplesSlider = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const handleAfterChange = (slideIndex: number) => {
@@ -43,41 +40,20 @@ const WorkExamplesSlider = () => {
     appendDots: (dots: boolean) => <div>{dots}</div>,
 
     responsive: [
-      // {
-      //   breakpoint: 1300,
-      //   settings: {
-      //     slidesToShow: 2,
-      //     slidesToScroll: 2,
-      //     infinite: true,
-      //     dots: true
-      //   }
-      // },
-      // {
-      //   breakpoint: 1180,
-      //   settings: {
-      //     slidesToShow: 2,
-      //     slidesToScroll: 2,
-      //     initialSlide: 2
-      //   }
-      // },
-      // {
-      //   breakpoint: 619,
-      //   settings: {
-      //     slidesToShow: 1,
-      //     slidesToScroll: 1
-      //   }
-      // }
+      {
+        breakpoint: 1280,
+        settings: {
+          rows: 1,
+          slidesPerRow: 1
+        }
+      }
     ],
     customPaging: function (i: number) {
       let activePage = 0;
-      if (window.innerWidth >= 1300) {
+      if (window.innerWidth >= 1280) {
         activePage = Math.ceil(currentSlide / 2);
       }
-      // else if (window.innerWidth >= 619) {
-      //   activePage = Math.ceil(currentSlide / 2);
-      // } else {
-      //   activePage = currentSlide;
-      // }
+
       return <CustomDot $active={i === activePage} />;
     }
   };
@@ -125,7 +101,7 @@ const WorkExamplesSlider = () => {
           height="44px"
           color={colors.darkPrimary}
           text="Все статьи"
-          link="/"></BtnLink>
+          link="#"></BtnLink>
       </ButtonWrapper>
     </SliderContainer>
   );

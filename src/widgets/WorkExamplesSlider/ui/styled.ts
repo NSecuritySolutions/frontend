@@ -14,15 +14,16 @@ const ReviewsContainer = styled.article`
   height: 332px;
   background-color: ${colors.backgroundPrimary};
   font-family: Manrope, sans-serif;
+  justify-content: center;
 
-  // @media (max-width: 940px) {
-  //   margin-top: 30px;
-  // }
-
-  // @media (max-width: 619px) {
-  //   margin-top: 30px;
-  // }
+  @media (max-width: 619px) {
+    max-width: 280px;
+    img {
+      display: none;
+    }
+  }
 `;
+
 const SliderContainer = styled.section`
   margin: 60px auto;
   background-color: ${colors.backgroundBase2};
@@ -33,26 +34,43 @@ const SliderContainer = styled.section`
   width: 100%;
   row-gap: 20px;
 
-  .slick-list{
-    margin-bottom: 40px;
-
+  @media (max-width: 1280px) {
+    min-height: 0;
+    .slick-slide {
+      display: flex;
+      div {
+        justify-content: center;
+      }
+    }
   }
-   .slick-slide{
+
+  @media (max-width: 619px) {
+    article {
+      padding: 25px;
+    }
+  }
+
+  .slick-list {
+    margin-bottom: 40px;
+  }
+
+  .slick-slide {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: space-between;
-     div { 
+
+    div {
       display: flex;
       column-gap: 20px;
-
+      justify-content: center;
     }
-    }
+  }
 
-    .slick-initialized .slick-slide {
-      row-gap: 40px;
-      article {
-        row-gap: 0px;
-      }
+  .slick-initialized .slick-slide {
+    row-gap: 40px;
+    article {
+      row-gap: 0px;
+    }
   }
 
   .slick-dots {
@@ -66,35 +84,22 @@ const SliderContainer = styled.section`
     text-align: center;
 
     li {
-
-        display: inline-block;
-        margin: 0 5px;
-        width: 10px; 
+      display: inline-block;
+      margin: 0 5px;
+      width: 10px;
+      height: 10px;
+      div {
+        width: 10px;
         height: 10px;
-        div {
-            width: 10px;
-            height: 10px;
-            background-color: #ccc;
-            border-radius: 50%;
-        }
+        background-color: #ccc;
+        border-radius: 50%;
+      }
 
-        &.slick-active div {
-            background-color: ${colors.btnPrimary};
-        }
+      &.slick-active div {
+        background-color: ${colors.btnPrimary};
+      }
     }
-
-  // @media (max-width: 1300px) {
-  //   max-width: 580px;
-  // }
-
-  // @media (max-width: 940px) {
-  //   max-width: 580px;
-  // }
-
-  // @media (max-width: 619px) {
-  //   max-width: 280px;
-  // }
-
+  }
 `;
 
 const ColumnTitle = styled.h2`
@@ -102,24 +107,14 @@ const ColumnTitle = styled.h2`
   display: flex;
   overflow: hidden;
   margin-bottom: 30px;
-  // white-space: nowrap;
-  // text-overflow: ellipsis;
 
   font:
     700 24px Manrope,
     sans-serif;
 
-  // @media (max-width: 940px) {
-  //   max-width: 580px;
-  //   width: 100%;
-  //   align-self: center;
-  // }
-
-  // @media (max-width: 619px) {
-  //   max-width: 268px;
-  //   width: 100%;
-  //   align-self: center;
-  // }
+  @media (max-width: 1280px) {
+    margin: 0 auto;
+  }
 `;
 
 const ReviewsTitle = styled.h3`
@@ -180,6 +175,9 @@ const ReviewsImg = styled.img<{
   left: ${props => props.$left};
   right: ${props => props.$right};
   width: ${props => props.$width};
+
+  
+  }
 `;
 export {
   ReviewsContainer,
