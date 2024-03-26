@@ -1,10 +1,10 @@
-import { FC } from "react";
+import { FC } from 'react';
 
-import { Logo } from "src/shared/components/Logo";
-import { navColumnLists, contacts } from "./temporaryConsts.ts";
-import { NavColumn } from "src/shared/components/NavColumn/index.ts";
-import { BtnLink } from "src/shared/components/BtnLink/index.ts";
-import colors from "src/shared/constants/colors/index.ts";
+import { Logo } from 'src/shared/components/Logo';
+import { navColumnLists, contacts } from './temporaryConsts.ts';
+import { NavColumn } from 'src/shared/components/NavColumn/index.ts';
+import { BtnLink } from 'src/shared/components/BtnLink/index.ts';
+import colors from 'src/shared/constants/colors/index.ts';
 
 import {
   FooterBottom,
@@ -25,12 +25,12 @@ import {
   FooterTopContainer,
   FooterWrapper,
   FooterBtnWrapper,
-  FooterContactsContentWrapper,
-} from "./styled";
+  FooterContactsContentWrapper
+} from './styled';
 
-import ProjectLogo from "src/assets/icons/new-logo.svg";
-import SvgLogoTelegram from "src/assets/icons/telegram.svg";
-import SvgLogoWhatsapp from "src/assets/icons/whatsapp.svg";
+import ProjectLogo from 'src/assets/icons/new-logo.svg';
+import SvgLogoTelegram from 'src/assets/icons/telegram.svg';
+import SvgLogoWhatsapp from 'src/assets/icons/whatsapp.svg';
 
 const Footer: FC = () => {
   return (
@@ -63,6 +63,7 @@ const Footer: FC = () => {
 
             <FooterBtnWrapper>
               <BtnLink
+                size="15px"
                 width="100%"
                 height="56px"
                 color={colors.darkPrimary}
@@ -77,7 +78,7 @@ const Footer: FC = () => {
         <FooterBottomContainer>
           <FooterRights>
             <FooterRightsText>
-              © 2020-2024 Интернет-компания{" "}
+              © 2020-2024 Интернет-компания{' '}
               <FooterDeveloperLink href="#" target="_blank">
                 ХХХ
               </FooterDeveloperLink>
@@ -90,7 +91,7 @@ const Footer: FC = () => {
             </FooterRightsText>
             <FooterDeveloperInfoBox>
               <FooterRightsText>
-                Сайт разработан командой{" "}
+                Сайт разработан командой{' '}
                 <FooterDeveloperLink href="#" target="_blank">
                   ХХХ Studio
                 </FooterDeveloperLink>
