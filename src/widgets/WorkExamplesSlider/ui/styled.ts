@@ -152,9 +152,15 @@ const ReviewsLink = styled.a<{ $active?: boolean }>`
   white-space: nowrap;
   padding: 12px 24px;
   width: 102px;
+  opacity: 1;
+
   font:
     800 15px/133% Manrope,
     sans-serif;
+
+  &:hover {
+    opacity: 0.6;
+  }
 `;
 
 const ButtonWrapper = styled.div`

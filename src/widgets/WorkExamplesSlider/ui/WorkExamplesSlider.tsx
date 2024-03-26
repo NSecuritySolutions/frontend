@@ -80,6 +80,7 @@ const WorkExamplesSlider = () => {
             <ReviewsLink href={item.cardLink}>Читать</ReviewsLink>
             {item?.cardSectionButton && item?.cardSectionLink && (
               <BtnLink
+                size="13px"
                 width="170px"
                 height="24px"
                 color={colors.darkPrimary}
@@ -97,6 +98,7 @@ const WorkExamplesSlider = () => {
       </Slider>
       <ButtonWrapper>
         <BtnLink
+          size="15px"
           width="130px"
           height="44px"
           color={colors.darkPrimary}

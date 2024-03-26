@@ -4,6 +4,7 @@ type TBtnLinkProps = {
   color: string;
   text: string;
   link: string;
+  size: string;
 };
 
 type TStyledBtnLinkProps = {
@@ -11,6 +12,7 @@ type TStyledBtnLinkProps = {
   height: string;
   color: string;
   href: string;
+  size: string;
 };
 
 export type { TBtnLinkProps, TStyledBtnLinkProps };
