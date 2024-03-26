@@ -9,6 +9,7 @@ const MainPage = () => {
     <>
       <ProjectStage />
       <OurTeam />
+      <OurClients/>
       <ReviewsBlock />
       <Footer />
     </>
