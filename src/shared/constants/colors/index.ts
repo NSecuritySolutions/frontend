@@ -12,6 +12,7 @@ const colors = {
   backgroundCardBl: '#E1E7F4',
   accentInfo: '#0DC0BE',
   accentNegative: '#FD4D61',
+  scrollActive: '#D7D7D7',
 };
 
 export default colors;
