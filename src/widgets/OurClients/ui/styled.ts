@@ -1,6 +1,6 @@
-import colors from 'src/shared/constants/colors';
+import colors from "src/shared/constants/colors";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Section = styled.section`
   background-color: ${colors.backgroundBase2};
@@ -65,7 +65,7 @@ const SectionTitle = styled.h2`
 const LogoWrapper = styled.div`
   margin-top: 40px;
   width: 100%;
-  min-height: 160px
+  min-height: 160px;
   padding: 20px 0;
   display: flex;
   flex-direction: row;
@@ -92,8 +92,12 @@ const LogoWrapper = styled.div`
   }
 `;
 
-const LogoYandex = styled.div<{ $imgUrl?: string, $imgUrl1?: string, alt?: string }>`
-  background: ${props => `url(${props.$imgUrl}) no-repeat`};
+const LogoYandex = styled.div<{
+  $imgUrl?: string;
+  $imgUrl1?: string;
+  alt?: string;
+}>`
+  background: ${(props) => `url(${props.$imgUrl}) no-repeat`};
   background-position: 0px -160px;
   background-size: cover;
   height: 160px;
@@ -105,12 +109,12 @@ const LogoYandex = styled.div<{ $imgUrl?: string, $imgUrl1?: string, alt?: strin
   }
 
   @media (max-width: 1300px) {
-    align-self: center
+    align-self: center;
   }
 `;
 
-const LogoSamokat = styled.div<{ $imgUrl?: string, alt?: string }>`
-  background: ${props => `url(${props.$imgUrl}) no-repeat`};
+const LogoSamokat = styled.div<{ $imgUrl?: string; alt?: string }>`
+  background: ${(props) => `url(${props.$imgUrl}) no-repeat`};
   background-position: -0.2px -190.3px;
   background-size: cover;
   height: 190px;
@@ -122,7 +126,7 @@ const LogoSamokat = styled.div<{ $imgUrl?: string, alt?: string }>`
   }
 
   @media (max-width: 1300px) {
-    align-self: center
+    align-self: center;
   }
 
   @media (max-width: 530px) {
@@ -133,8 +137,8 @@ const LogoSamokat = styled.div<{ $imgUrl?: string, alt?: string }>`
   }
 `;
 
-const LogoRostelecom = styled.div<{ $imgUrl?: string, alt?: string }>`
-  background: ${props => `url(${props.$imgUrl}) no-repeat`};
+const LogoRostelecom = styled.div<{ $imgUrl?: string; alt?: string }>`
+  background: ${(props) => `url(${props.$imgUrl}) no-repeat`};
   background-position: 0px -150.9px;
   background-size: cover;
   height: 151px;
@@ -146,12 +150,12 @@ const LogoRostelecom = styled.div<{ $imgUrl?: string, alt?: string }>`
   }
 
   @media (max-width: 1300px) {
-    align-self: center
+    align-self: center;
   }
 `;
 
-const LogoAvon = styled.div<{ $imgUrl?: string, alt?: string }>`
-  background: ${props => `url(${props.$imgUrl}) no-repeat`};
+const LogoAvon = styled.div<{ $imgUrl?: string; alt?: string }>`
+  background: ${(props) => `url(${props.$imgUrl}) no-repeat`};
   background-position: -1px -151.5px;
   background-size: cover;
   height: 160px;
@@ -163,7 +167,7 @@ const LogoAvon = styled.div<{ $imgUrl?: string, alt?: string }>`
   }
 
   @media (max-width: 1300px) {
-    align-self: center
+    align-self: center;
   }
 `;
 
