@@ -131,7 +131,7 @@ const ExamplesSlider = () => {
                 <div
                   style={{
                     width: width,
-                    minHeight: window.innerWidth > 1280 ? '200px' : height,
+                    minHeight: window.innerWidth > 1180 ? '200px' : height,
                     backgroundColor: '#fff',
                     borderRadius: '20px'
                   }}></div>
