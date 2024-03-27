@@ -13,6 +13,10 @@ const colors = {
   accentInfo: '#0DC0BE',
   accentNegative: '#FD4D61',
   scrollActive: '#D7D7D7',
+
+  btnOutline: '#fff',
+  btnOutlineHover: '#0dc0be',
+  btnOutlineActive: '#101010'
 };
 
 export default colors;

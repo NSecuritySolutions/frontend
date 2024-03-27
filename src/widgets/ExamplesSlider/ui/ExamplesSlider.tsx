@@ -25,6 +25,7 @@ import {
 } from './styled.ts';
 import { BtnLink } from 'src/shared/components/BtnLink/index.ts';
 import { TWorkExamples } from 'src/shared/constants/texts/types.ts';
+import { OutlineBtn } from 'src/shared/components/OutlineBtn/index.ts';
 
 const ExamplesSlider = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
@@ -143,9 +144,8 @@ const ExamplesSlider = () => {
                   {truncate(item.cardText, TEXT_LIMIT)}
                 </ExamplesText>
                 <ButtonWrapper>
-                  <ExamplesButton href={item?.cardLink}>
-                    Подробнее
-                  </ExamplesButton>
+                  <ExamplesButton>Подробнее</ExamplesButton>
+
                   <IconWrapper>
                     {item.cardIcons?.map((item, i) => (
                       <img

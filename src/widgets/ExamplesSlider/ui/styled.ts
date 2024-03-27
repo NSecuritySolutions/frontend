@@ -206,7 +206,7 @@ const ExamplesButton = styled.a<{ $active?: boolean }>`
     sans-serif;
 
   &:hover {
-    opacity: 0.6;
+    background-color: ${colors.btnOutlineHover};
   }
 `;
 
