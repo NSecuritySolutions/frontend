@@ -40,14 +40,15 @@ export type TError404 = {
 
 export type TWorkExamples = {
   id: number;
+  date?: string | number | Date;
   cardTitle: string;
   cardText: string;
   cardLink: string;
   cardImage?: string | undefined;
   cardSectionButton?: string | undefined;
   cardSectionLink?: string | undefined;
-  top?: string | undefined;
-  left?: string | undefined;
-  right?: string | undefined;
-  width?: string | undefined;
+  cardIcons?: {
+    link: string;
+    alt: string;
+  }[];
 };
