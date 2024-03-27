@@ -1,6 +1,6 @@
-import colors from 'src/shared/constants/colors';
+import colors from "src/shared/constants/colors";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const CardContainer = styled.article`
   display: flex;
@@ -9,7 +9,7 @@ const CardContainer = styled.article`
   width: 100%;
   color: ${colors.darkPrimary};
   font-weight: 400;
-  font-size: 16px;s
+  font-size: 16px;
 `;
 
 const CardImg = styled.div<{ $imgUrl?: string; alt?: string }>`
@@ -17,7 +17,7 @@ const CardImg = styled.div<{ $imgUrl?: string; alt?: string }>`
   background-color: ${colors.backgroundCardBl};
   width: 180px;
   height: 180px;
-  background: ${props => `url(${props.$imgUrl}) no-repeat center`};
+  background: ${(props) => `url(${props.$imgUrl}) no-repeat center`};
   background-size: cover;
 `;
 
