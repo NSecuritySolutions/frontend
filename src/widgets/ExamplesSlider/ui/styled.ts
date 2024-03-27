@@ -110,8 +110,8 @@ const ExamplesContainer = styled.article`
   display: flex !important;
   flex-direction: column;
   gap: 10px;
-  width: 320px;
-  // width: 100%;
+  max-width: 320px;
+  width: 100%;
   min-height: 202px;
   background-color: ${colors.backgroundBase3};
   font-family: Manrope, sans-serif;

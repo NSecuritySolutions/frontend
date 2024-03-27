@@ -25,7 +25,6 @@ import {
 } from './styled.ts';
 import { BtnLink } from 'src/shared/components/BtnLink/index.ts';
 import { TWorkExamples } from 'src/shared/constants/texts/types.ts';
-import { OutlineBtn } from 'src/shared/components/OutlineBtn/index.ts';
 
 const ExamplesSlider = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
@@ -36,7 +35,9 @@ const ExamplesSlider = () => {
 
   const resizeHandler = () => {
     const { clientHeight, clientWidth } = ref.current || {};
+
     console.log(clientWidth);
+
     if (clientWidth >= 1280) {
       setWidth('200px');
       setHeight('200px');
@@ -130,7 +131,7 @@ const ExamplesSlider = () => {
                 <div
                   style={{
                     width: width,
-                    minHeight: window.innerWidth > 1180 ? '200px' : height,
+                    minHeight: window.innerWidth > 1280 ? '200px' : height,
                     backgroundColor: '#fff',
                     borderRadius: '20px'
                   }}></div>
