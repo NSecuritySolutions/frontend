@@ -19,13 +19,11 @@ const SliderContainer = styled.section`
 
   @media (max-width: 916px) {
     max-width: 580px;
-
     width: 100%;
   }
 
   @media (max-width: 619px) {
     max-width: 280px;
-
     width: 100%;
   }
 
@@ -112,15 +110,15 @@ const ExamplesContainer = styled.article`
   display: flex !important;
   flex-direction: column;
   gap: 10px;
-  max-width: 320px;
-  width: 100%;
+  width: 320px;
+  // width: 100%;
   min-height: 202px;
   background-color: ${colors.backgroundBase3};
   font-family: Manrope, sans-serif;
   justify-content: center;
 
-  @media (max-width: 1280px) {
-    max-width: 390px;
+  @media (max-width: 916px) {
+    max-width: 240px;
   }
 `;
 
@@ -214,6 +212,7 @@ const IconWrapper = styled.div`
   display: flex !important;
   flex-direction: row;
   column-gap: 12px !important;
+
   @media (max-width: 916px) {
     flex-direction: row;
     align-items: flex-end;
